@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nexus_engine"
+version = "1.0.0"
+description = "A high-performance distributed event stream processing and consensus engine"
+readme = "README.md"
+authors = [
+    { name = "Jitunus Habte" }
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0"
+]
+
+[tool.setuptools.packages.find]
+include = ["core*", "network*", "storage*", "utils*"]
